@@ -1,0 +1,15 @@
+Condition,Wang,Yao
+Atelectasis,0.716,0.772
+Cardiomegaly,0.807,0.904
+Effusion,0.784,0.859
+Infiltration,0.609,0.695
+Mass,0.706,0.792
+Nodule,0.671,0.717
+Pneumonia,0.633,0.713
+Pneumothorax,0.806,0.841
+Consolidation,0.708,0.788
+Edema,0.835,0.882
+Emphysema,0.815,0.829
+Fibrosis,0.769,0.767
+Pleural Thickening,0.708,0.765
+Hernia,0.767,0.914
