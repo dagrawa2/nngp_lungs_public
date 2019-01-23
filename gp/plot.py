@@ -22,7 +22,7 @@ plt.plot(depth, auc2, color="blue", label="Varying")
 plt.legend(title="Hyperparameters")
 plt.xlabel("Depth")
 plt.ylabel("AUC")
-plt.title("Test ROC AUC of NNGP of various depths")
+plt.title("Test AUC of NNGP of various depths")
 plt.savefig("plots/auc.png", box_inches="tight")
 
 
@@ -38,7 +38,7 @@ plt.plot(depth, v_w, color="blue", label="$v_w$")
 plt.legend(title="Hyperparameter")
 plt.xlabel("Depth")
 plt.ylabel("Value")
-plt.title("Optimal prior variances for an NNGP for various depths")
+plt.title("Optimal prior variances for NNGP-UNIF of various depths")
 plt.savefig("plots/nngp_params.png", box_inches="tight")
 
 drop_nan = lambda row: row[row!=np.nan]
@@ -56,7 +56,7 @@ for i in range(1, len(depth)):
 plt.legend(title="Depth")
 plt.xlabel("Layer")
 plt.ylabel("$v_w$")
-plt.title("Optimal $v_w$ at each layer of NNGP of various depths")
+plt.title("Optimal $v_w$ at each layer of NNGP-VARY of various depths")
 plt.savefig("plots/nngp2_param_v_w.png", box_inches="tight")
 
 data = pd.read_csv("results/nngp2_param_v_b.csv").values
@@ -71,7 +71,7 @@ for i in range(1, len(depth)):
 plt.legend(title="Depth")
 plt.xlabel("Layer")
 plt.ylabel("$v_b$")
-plt.title("Optimal $v_b$ at each layer of NNGP of various depths")
+plt.title("Optimal $v_b$ at each layer of NNGP-VARY of various depths")
 plt.savefig("plots/nngp2_param_v_b.png", box_inches="tight")
 
 print("Done!")
