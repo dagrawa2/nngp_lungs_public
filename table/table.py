@@ -19,7 +19,8 @@ rbfsvc = np.round(pd.read_csv("../svc/results/rbf_auc.csv").values[load_json("..
 rf = np.round(pd.read_csv("../rf/results/aucs.csv").values[load_json("../rf/results/info.json")["best"]["row_index"], 3:], 3)
 
 sota = pd.read_csv("sota.csv")
-wang = sota["Wang"].values.reshape((-1))
+#wang = sota["Wang"].values.reshape((-1))
+wang = sota["Wang_correct"].values.reshape((-1))
 wang = np.round(np.concatenate((wang, np.mean(wang, keepdims=True)), axis=0), 3)
 yao = sota["Yao"].values.reshape((-1))
 yao = np.round(np.concatenate((yao, np.mean(yao, keepdims=True)), axis=0), 3)
